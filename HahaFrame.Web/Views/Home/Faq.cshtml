@@ -1,0 +1,42 @@
+﻿@model IList<HahaFrame.Data.Domain.KnowledgeBase>
+@{
+    ViewBag.Title = "Affordable Pups Frequently Asked Questions | All about Puppies Breeds";
+    ViewBag.MetaDescription = "Find answers to frequently asked questions about puppies, how to use the Affordable Pups website and purchase or buy your favorite puppy breed. Find answers about puppies personality, breed, behavior, health care, feeding, temperament, weight, training, grooming. ";
+    ViewBag.MetaKeywords = "frequently asked questions about puppies, frequently asked questions about breeder of puppies, faq pup, faq pupps, faq puppies personality, faq puppies health care, faq puppies temperament, faq Affordable Pups, faq Yorkie Puppies, faq Morkie puppies, faq Havanese pups, faq Cavalier King Charles Puppies, faq Pomeranian, faq Cavachon, faq CavaPoo, faq Yorkie Poo";
+}
+
+<div class="MainRightBorder">
+    <div id="MainRight">
+        <div class="RoundedTitle">
+            <h1>Frequently Asked Questions  (click on question to view answer)</h1>
+        </div>
+        <div class="ContactPanel">
+            <div id="accordion">
+                @foreach (var kb in Model)
+                {
+                    <div id="Question@(kb.ItemID)" style="margin:5px 0 0 0">
+                        <div style="border-bottom: solid 1px #C4B781; padding-bottom:5px;">
+                            <a href="javascript:return;" onclick="$('.Answers').slideUp();$(this).parent().parent().next().slideDown(1000, function() { $.scrollTo($('#Question@(kb.ItemID)'), {duration:1000}); });" class="FaqQ">Q: @kb.ItemTitle</a>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="Answers" style="display: none; margin-top: 4px; margin-bottom: 4px;">
+                        <div style="margin-top: 2px;">A: @kb.ItemContent</div>
+                        <div class="clear"></div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="/scripts/jquery.scrollTo.js" type="text/javascript"></script>
+
+    <style type="text/css">
+        #accordion a, #accordion a:visited, #accordion a:hover {
+            color: Black;
+        }
+    </style>
+}

@@ -1,0 +1,494 @@
+﻿<!DOCTYPE html>
+<html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="Description" content="@ViewBag.MetaDescription" />
+    <meta name="Keywords" content="@ViewBag.MetaKeywords" />
+    <meta name="Robots" content="INDEX, FOLLOW" />
+    <meta name="Robots" content="ALL" />
+    <meta name="GOOGLEBOT" content="INDEX, FOLLOW" />
+    <meta name="y_key" content="9a4a1bcad1359b99" />
+    <meta name="msvalidate.01" content="CA4F1379B47A9483172873E001106B48" />
+    <meta name="verify-v1" content="R3Db31DoutPfM7K2+v3Kv88ZpCMmlGwrS/jaFLPoHUo=" />
+    <link rel="alternate" type="application/rss+xml" title="ROR" href="/ror.xml" />
+    <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta http-equiv="expires" content="0" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    @Styles.Render("~/bundles/css")
+    <!--[if lt IE 9]>
+        <script src="/js/html5shiv.js"></script>
+        <script type="text/javascript" src="/js/respond.min.js"></script>
+    <![endif]-->
+
+    @Scripts.Render("~/bundles/modernizr")
+    @RenderSection("Header", required: false)
+
+</head>
+<body>
+    <!--Facebook-->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '1618834648332402',
+                xfbml: true,
+                version: 'v2.3'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
+
+    <div class="wrapper">
+	    <!-- Header Start -->
+	    <header>
+    	    <!-- Header Top Strip Start -->
+    	    <div class="topstrip">
+        	    <div class="custom-container">
+            	    <div class="row">
+                        <!-- Top Categories Start -->
+                        <div class="col-lg-10 col-md-10 col-sm-8 col-xs-6">
+                            <div class="topcategories">
+                                <!-- navbar Start -->
+                                <div class="navbar yamm navbar-default">
+                                    <div class="navbar-header">
+                                        <button type="button" data-toggle="collapse" data-target="#navbar-collapse-2" class="navbar-toggle">
+                                            <i class="fa fa-bars"></i> Categories
+                                        </button>
+                                    </div>
+                                    <div id="navbar-collapse-2" class="navbar-collapse collapse">
+                                        @Html.Action("TopCategories", "Common")
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <!-- Top Categories End -->
+                        <!-- Social Network Start -->
+                        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                    	    <div class="socialnetworks">
+                                <ul class="pull-right">
+                                    <li>
+                                	    <a href="https://www.facebook.com/pages/HahaFrame/1649809568597640" data-toggle="tooltip" title="Facebook" data-placement="bottom" class="facebook">
+                                    	    <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                	    <a href="https://www.youtube.com" data-toggle="tooltip" title="Youtube" data-placement="bottom" class="youtube">
+                                    	    <i class="fa fa-youtube"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                	    <a href="https://twitter.com/hahaframe" data-toggle="tooltip" title="Twitter" data-placement="bottom" class="twitter">
+                                    	    <i class="fa fa-twitter"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
+                        <!-- Social Network End -->
+                    </div>
+                </div>
+            </div>
+            <!-- Header Top Strip End -->
+            <!-- Logo + Search + Advertisment Start -->
+            <div class="logobar">
+        	    <div class="custom-container">
+            	    <div class="row">
+                        <!-- Logo Start -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="logo">
+                        	    <a href="/"><img src="/images/logo.png" alt="HahaFrame" /></a>
+                            </div>
+                        </div>
+                        <!-- Logo End -->
+                        <!-- Search Start -->
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                            <div class="searchbox">
+                        @*
+                            <form>
+                                <ul>
+                                    <li><input type="text" placeholder="Search Videos" /></li>
+                                    <li class="pull-right"><input type="submit" value="GO" /></li>
+                                </ul>
+                            </form>
+                        *@
+                            </div>
+                        </div>
+                        <!-- Search End -->
+                        <!-- Advertisment Start -->
+                        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                            <!-- HahaFrame Header -->
+                            <ins class="adsbygoogle"
+                                 style="display:inline-block;width:728px;height:90px"
+                                 data-ad-client="ca-pub-7382014506111041"
+                                 data-ad-slot="4860459313"></ins>
+                            <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                            </script>
+                        </div>
+                        <!-- Advertisment End -->
+            	    </div>
+                </div>
+            </div>
+            <!-- Logo + Search + Advertisment End -->
+            <!-- Navigation Strip Start -->
+            <div class="navigationstrip bordercolor-top">
+        	    <div class="custom-container">
+            	    <div class="row">
+                        <!-- Login Start -->
+                        <div class="col-lg-9 col-md-3 col-sm-6 col-xs-8">
+                            @if (Request.IsAuthenticated)
+                            {
+                                <div class="navigation">
+                                    <!-- navbar Start -->
+                                    <div class="navbar yamm navbar-default">
+                                        <div class="row">
+                                            <div class="navbar-header">
+                                                <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+                                                    <i class="fa fa-bars"></i> Menu
+                                                </button>
+                                            </div>
+                                            <div id="navbar-collapse-1" class="navbar-collapse collapse">
+                                                <ul class="nav navbar-nav">
+                                                    <!-- My Account Start -->
+                                                    <li class="dropdown">
+                                                        <a class="dropdown-toggle" data-toggle="dropdown" href="/account">My Account</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <!-- Content container to add padding -->
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                                            <h5>Account</h5>
+                                                                            <ul class="list-unstyled">
+                                                                                <li><a href="/account/manage">Manage Account</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                                            <h5>Profile</h5>
+                                                                            <ul class="list-unstyled">
+                                                                                <li><a href="/account/profile">My Profile</a></li>
+                                                                                <li><a href="/account/frames">My Frames</a></li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <!-- My Account End -->
+                                                    
+                                                    @if (Roles.IsUserInRole("Admin"))
+                                                    {
+                                                        <!-- My Account Start -->
+                                                        <li class="dropdown">
+                                                            <a class="dropdown-toggle" data-toggle="dropdown" href="/admin">Admin</a>
+                                                            <ul class="dropdown-menu">
+                                                                <li>
+                                                                    <!-- Content container to add padding -->
+                                                                    <div class="yamm-content">
+                                                                        <div class="row">
+                                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                                                <h5>General</h5>
+                                                                                <ul class="list-unstyled">
+                                                                                    <li><a href="/admin/accounts">Dashboard</a></li>
+                                                                                    <li><a href="/admin/accounts">View Accounts</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                                                                <h5>Frames</h5>
+                                                                                <ul class="list-unstyled">
+                                                                                    <li><a href="/admin/frames">View Frames</a></li>
+                                                                                    <li><a href="/admin/approve">Approve Frames</a></li>
+                                                                                    <li><a href="/admin/reported">Reported Content</a></li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                        <!-- My Account End -->
+                                                    }
+
+                                                    <!-- Upload Start -->
+                                                    <li class="dropdown ">
+                                                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Upload</a>
+                                                        <ul class="dropdown-menu">
+                                                            <li>
+                                                                <div class="yamm-content">
+                                                                    <div class="row">
+                                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                                            <a href="/contact-us">
+                                                                                <strong>
+                                                                                    <i class="fa fa-envelope"></i>
+                                                                                    Upload your frame
+                                                                                </strong>
+                                                                            </a>
+                                                                            <hr />
+                                                                        </div>
+                                                                        <div class="col-lg-12 col-md-8 col-sm-12 col-xs-12">
+                                                                            <div class="contact-forms">
+                                                                                <form>
+                                                                                    <div class="row">
+                                                                                        <div class="col-lg-6 col-md-6 col-sm-12 .col-xs-12">
+                                                                                            <input type="file" placeholder="Your frame" /><br />
+                                                                                        </div>
+                                                                                        <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12">
+                                                                                            <input type="text" placeholder="Title" />
+                                                                                        </div>
+                                                                                        <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12">
+                                                                                            <textarea placeholder="Description"></textarea>
+                                                                                        </div>
+                                                                                        <div class="col-lg-12 col-md-12 col-sm-12 .col-xs-12">
+                                                                                            <button type="button" class="btn btn-primary backcolor">
+                                                                                                <span>Upload</span>
+                                                                                                <i class="fa fa-angle-right"></i>
+                                                                                            </button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <!-- Upload End -->
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-8">
+                            <div class="loginsec pull-right">
+                                @if (Request.IsAuthenticated)
+                                {
+                                    <a href="/account/LogOff" class="colorhover"><i class="fa fa-sign-in"></i>Logout</a>
+                                }
+                                else
+                                {
+                                    <a href="/account/login" class="colorhover"><i class="fa fa-lock"></i>Login</a>
+                                    <a href="/account/register" class="colorhover"><i class="fa fa-sign-in"></i>Sign Up</a>
+                                }
+                            </div>
+                        </div>
+                        <!-- Login End -->
+				    </div>
+                </div>
+            </div>
+            <!-- Navigation Strip End -->
+        </header>
+        <!-- Header End -->
+        <!-- Contents Start -->
+        <div class="contents">
+            @RenderBody()
+        </div>
+        <!-- Contents End -->
+        <!-- Footer Start -->
+        <footer class="style3">
+            <div class="custom-container">
+                @*<div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img19.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">Waters Years</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img20.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">Fourth Winged</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img21.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">Gathering Creepeth</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img22.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">Firmament Fly</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img23.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">First Sixth Be</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+            <!-- Video Box Start -->
+            <div class="videobox">
+                <figure>
+                    <!-- Video Thumbnail Start -->
+                    <a href="video-detail-double-sidebar.html">
+                        <img class="img-responsive hovereffect" alt="" src="images/img24.jpg">
+                    </a>
+                    <!-- Video Thumbnail End -->
+                    <!-- Video Title + Info Start -->
+                    <figcaption>
+                        <h2><a href="video-detail-double-sidebar.html">Gathered Green</a></h2>
+                        <div class="clearfix"></div>
+                    </figcaption>
+                    <!-- Video Title + Info End -->
+                </figure>
+            </div>
+            <!-- Video Box End -->
+        </div>
+    </div>
+                <hr />*@
+                <div class="row">
+                    <div class="col-lg-10 col-md-10 col-sm-9 .col-xs-9">
+                        <p class="copyrights">© @DateTime.Now.Year. All rights reserved. Copyright <a href="http://hahaframe.com"><strong>HahaFrame</strong></a></p>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-3 .col-xs-3">
+                        <div class="socialnetworks">
+                            <ul class="pull-right">
+                                <li><a href="https://www.facebook.com/pages/HahaFrame/1649809568597640" data-toggle="tooltip" title="Facebook" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://www.youtube.com" data-toggle="tooltip" title="Youtube" class="youtube"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="https://twitter.com/hahaframe" data-toggle="tooltip" title="Twitter" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer End --> 
+        <a href="#" class="pull-right gotop btn btn-primary backcolor"> <i class="fa fa-arrow-up"></i> </a>
+    </div>
+    
+    
+
+
+  
+    <!-- Google+ -->
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    <!--Pinterest-->
+    <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-6847669-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <!--// Javascript //-->
+    <script type="text/javascript" src="/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script type="text/javascript" src="/js/responsiveCarousel.js"></script>
+    <script type="text/javascript" src="/js/slimbox2.js"></script>
+    <script type="text/javascript" src="/js/responsive-paginate.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-5526290-41', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

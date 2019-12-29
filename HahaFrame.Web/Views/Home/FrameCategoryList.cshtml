@@ -1,0 +1,54 @@
+﻿@model HahaFrame.Web.Models.CategoryListModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutSidebar.cshtml";
+    ViewBag.Title = "HahaFrame - " + Model.Title;
+    ViewBag.MetaDescription = Model.MetaDescription;
+    ViewBag.MetaKeywords = "funny pictures";
+}
+
+<div class="sections">
+    <h2 class="heading">@Model.Title</h2>
+    <div class="clearfix"></div>
+    <div class="row">
+        @foreach (var frame in Model.Frames)
+        {
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="blogposttwo">
+                    <figure>
+                        <a href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)">
+                            <img alt="" align="middle" class="img-responsive" style="max-width:670px;" src="/frames/@frame.PhotoUrl?preset=frames">
+                        </a>
+                    </figure>
+                    <div class="text">
+                        <h4><a href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)">@frame.Title</a></h4>
+                        <ul>
+                            <li><i class="fa fa-calendar"></i>@frame.DateUploaded.ToString("g")</li>
+                            <li>
+                                <i class="fa fa-align-justify"></i>
+                                @*<a href="@frame.CategoryWebName">@frame.CategoryName</a>*@
+                            </li>
+                        </ul>
+                        <p>
+                            @frame.MetaDescription
+                        </p>
+                        <a class="btn btn-primary btn-xs backcolor" href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)">Read More</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Breadcrumbs
+{
+    <!-- Bread Crumb Start -->
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li class="active">@Model.Title</li>
+        </ol>
+    </div>
+    <!-- Bread Crumb End -->
+}

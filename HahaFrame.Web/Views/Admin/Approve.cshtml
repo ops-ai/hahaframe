@@ -1,0 +1,65 @@
+﻿@using System.Collections
+@using System.Globalization
+@model HahaFrame.Web.Models.CategoryListModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutNoSidebar.cshtml";
+}
+
+<div class="sections">
+    <h2 class="heading">Approve Frames</h2>
+    <div class="clearfix"></div>
+    <div class="row">
+        @foreach (var frame in Model.Frames)
+        {
+            using (Html.BeginForm("Approve", "Admin", FormMethod.Post))
+            {
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <figure>
+                        <a href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)">
+                            <img alt="" align="middle" class="img-responsive" style="max-width:670px;" src="/frames/@frame.PhotoUrl?preset=frames">
+                        </a>
+                    </figure>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="blogposttwo">
+                        <div class="text">
+                            @Html.Hidden("FrameId", frame.FrameId)
+                            <div class="form-group">
+                                @Html.Label("Title", new { @class = "col-sm-3 control-label" })
+                                <div class="col-sm-9">
+                                    @Html.TextBox("Title", frame.Title, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.Label("Description", new { @class = "col-sm-3 control-label" })
+                                <div class="col-sm-9">
+                                    @Html.TextArea("Description", frame.MetaDescription, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.Label("WebName", new { @class = "col-sm-3 control-label" })
+                                <div class="col-sm-9">
+                                    @Html.TextBox("WebName", frame.WebName, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.Label("Category", new { @class = "col-sm-3 control-label" })
+                                <div class="col-sm-9">
+                                    @Html.DropDownList("CategoryId", ((IEnumerable<SelectListItem>)ViewBag.Categories).Select(t => new SelectListItem { Text = t.Text, Value = t.Value, Selected = t.Value == frame.CategoryId.ToString(CultureInfo.InvariantCulture)}), new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-3 col-sm-9">
+                                    <input class="btn btn-primary backcolor" type="submit" value="Approve" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            }
+            <div class="clearfix"></div>
+        }
+    </div>
+</div>

@@ -1,0 +1,12 @@
+﻿@model IList<HahaFrame.Data.Domain.FrameCategory>
+@{ Layout = null; }
+
+<ul class="nav navbar-nav">
+    <li>@Html.ActionLink("Featured", "CategoryList", "Home", new { webName = "featured" }, null)</li>
+    <li>@Html.ActionLink("Popular", "CategoryList", "Home", new { webName = "popular" }, null)</li>
+
+    @foreach (var category in Model)
+    {
+        <li>@Html.ActionLink(category.Name, "CategoryList", "Home", new { webName = category.WebName }, null)</li>
+    }
+</ul>

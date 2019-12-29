@@ -1,0 +1,27 @@
+﻿@model HahaFrame.Web.Models.CategoryListModel
+
+@{ Layout = null; }
+
+<div class="widget">
+    <h2 class="heading">@Model.Title</h2>
+    <div class="videolistsmall">
+        <ul class="bloglist">
+            @foreach (var frame in Model.Frames)
+            {
+            <li>
+                <div class="media">
+                    <a href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)" class="pull-left">
+                        <img class="media-object img-responsive" src="/frames/@frame.PhotoUrl?preset=frame-small" alt="" />
+                    </a>
+                    <div class="media-body">
+                        <h5><a href="/@Model.WebName/@(frame.FrameId + "_" + frame.WebName)">@frame.Title</a></h5>
+                        <ul>
+                            <li><i class="fa fa-clock-o"></i>@frame.DateUploaded.ToString("g")</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            }
+        </ul>
+    </div>
+</div>

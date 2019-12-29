@@ -1,0 +1,35 @@
+﻿@model HahaFrame.Web.Models.LocalPasswordModel
+@{
+    ViewBag.Title = "Manage Account";
+    Layout = "~/Views/Shared/_LayoutNoSidebar.cshtml";
+}
+
+<div class="sections">
+    <h2 class="heading">&nbsp;</h2>
+    <div class="clearfix"></div>
+
+    <div class="row">
+
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            
+            @if (ViewBag.HasLocalPassword)
+            {
+                @Html.Partial("_ChangePasswordPartial")
+            }
+            else
+            {
+                @Html.Partial("_SetPasswordPartial")
+            }
+            <p class="message-success">@ViewBag.StatusMessage</p>
+            <br><br>
+        </div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+            <section id="externalLogins">
+                @Html.Action("RemoveExternalLogins")
+
+                <legend>Add an external login</legend>
+                @Html.Action("ExternalLoginsList", new { ReturnUrl = ViewBag.ReturnUrl })
+            </section>
+        </div>
+    </div>
+</div>

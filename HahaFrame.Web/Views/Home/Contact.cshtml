@@ -1,0 +1,136 @@
+﻿@model HahaFrame.Web.Models.ContactModel
+@{
+    ViewBag.Title = "Contact Us – Affordable Pups";
+}
+
+<div class="MainRightBorder">
+    <div id="MainRight">
+        <div class="RoundedTitle">
+            <h1>Contact Affordable Pups</h1>
+        </div>
+        <div class="ContactPanel">
+          
+            <h2>Call Us</h2>
+
+            +1 (614) 859-2025<br />
+            FOR ANY EMERGENCY CALL 740-469-2445 or 614-946-9464 DAY OR NIGHT.
+            <br /><br />
+
+
+            <h2>Location</h2>
+            Affordable Pups is located in Johnstown, Ohio.  Just 15 minutes from Columbus Metro.
+            <br /><br />
+            <a href="http://maps.google.com/maps?q=13326+Miller+Road,+Johnstown,+OH" title="Click here to see a map" target="_blank">Google Map</a><br />
+            13326 Miller Road<br />
+            Johnstown, OH 43031
+
+            <br /><br />
+
+            <table style="width: 100%">
+                <tr>
+                    <td style="width: 50%; font-weight: bold">
+                        Local Pick Up & Appointment Hours
+                    </td>
+                    <td style="font-weight: bold">
+                        Call Center Hours
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table>
+                            <tr><td style="width: 100px">Mon</td><td>9AM - 5PM</td></tr>
+                            <tr><td> Tues   </td><td>1PM - 9PM   </td></tr>
+                            <tr><td> Weds   </td><td>9AM - 9PM   </td></tr>
+                            <tr><td>Thurs    </td><td> 9AM - 9PM  </td></tr>
+                            <tr><td>Fri    </td><td>9AM - 5PM   </td></tr>
+                            <tr><td>Sat    </td><td>10AM - 5PM   </td></tr>
+                            <tr><td>Sun</td> <td> 12PM - 5PM  </td></tr>
+                        </table>
+                    </td>
+                    <td>
+                        <table>
+                            <tr><td style="width: 100px">Mon</td><td>9AM - 10PM</td></tr>
+                            <tr><td> Tues   </td><td>9AM - 12PM  </td></tr>
+                            <tr><td> Weds   </td><td>9AM - 12PM  </td></tr>
+                            <tr><td>Thurs    </td><td> 9AM - 12PM  </td></tr>
+                            <tr><td>Fri    </td><td>9AM - 10PM  </td></tr>
+                            <tr><td>Sat    </td><td>10AM - 10PM   </td></tr>
+                            <tr><td>Sun</td><td> 10AM - 10PM  </td></tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+
+            <br />
+            <b>
+                Please call to Notify Us Prior to Your Arrival So We can be Prepared
+            </b>
+            <br />
+            <b>
+                Some Exceptions Can be Made To Our Local Pick Up Hours But You Must Call For Approval
+            </b>
+            <br />
+
+            <br /><br />
+            @using (Html.BeginForm())
+            {
+                <text>
+                    <h2>Email Us:</h2>
+                    <img src="/content/images/email_us.png" alt="Email Us" /><br />
+                    Name: <br />
+                    @Html.TextBoxFor(t => t.Name, new { style = "width:270px" })<br /><br />
+
+                    Email Address: <br />
+                    @Html.TextBoxFor(t => t.EmailAddress, new { style = "width:270px" })<br /><br />
+
+                    Question / Comments: <br />
+                    @Html.TextAreaFor(t => t.Message, 6, 60, null)<br>
+
+                    @Html.ValidationSummary()
+                    <br />
+                    <input type="submit" value="Send" />
+                    <input type="reset" value="Cancel" />
+                </text>
+            }
+            <br /><br />
+
+           
+
+            <br /><br />
+            <h2>Come Join the HahaFrame.com Family!!!</h2>
+            <p><img src="/staff/Group Photo.png?w=670"></p>
+
+            &nbsp;
+
+
+
+
+            <h2>History</h2>
+            Affordable Pups was started in the fall of 2004. Not much has changed. We still offer great prices on fantastic puppies that people want.<br /><br />
+
+            <div class="MidThumb" style="width: 270px; float: left; margin: 0 8px 8px 0;">
+                <img src="/staff/MichaelSchoeffMid.jpg?w=270" alt="Michael Schoeff - HahaFrame Owner" />
+            </div>
+            <div class="MidName">
+                <h2>Michael Schoeff <span style="color: #62a961;">- Owner</span></h2>
+            </div>
+            <div class="Bio">
+                <p><b>Graduate of Mount Vernon Nazarene University with a degree in Finance and Accounting (2004)</b></p>
+                <p>In 2004 I established affordable pups to offer quality puppies at a reasonable price!  In 8 years we have done nothing less than provided healthy amazing puppies at affordable prices.  I have spent 8 years perfecting the breeders that we deal with allowing our customers to adopt only the BEST!  I take extreme pride in the Yorkshire Terriers, Maltese, Pomeranian, Cavaliers and Havanese that we acquire for sale; focusing mainly on those breeds but continually attempting to expand our horizons.  I personally spend time with the puppies daily and I have kept direct involvement with purchasing of the puppies to ensure perfection!  The health and quality of the puppies is my NUMBER ONE concern and focus and I will make a personal commitment to having a hands on approach everyday!!!</p>
+                <p>Thank you so much for considering Affordable Pups in adopting a companion into your life; we hope to see photos as well as a customer referral in the near future.</p>
+            </div>
+            <div class="ClearBoth"></div><br /><br />
+
+
+            <div class="MidThumb" style="width: 270px; float: left; margin: 0 8px 8px 0;">
+                <img src="/content/images/group_photo2thumb.jpg?w=270" alt="Affordable Pup Facility" />
+            </div>
+            <div class="MidName">
+                <h2>Affordable Pup Facility</h2>
+            </div>
+            <div class="Bio">@Html.ActionLink("To view a gallery of our state of the art facility, click here", "Facility")</div>
+            <div class="ClearBoth"></div>
+
+        </div>
+    </div>
+</div>

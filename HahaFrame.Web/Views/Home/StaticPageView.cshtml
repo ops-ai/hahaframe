@@ -1,0 +1,15 @@
+﻿@model HahaFrame.Data.Domain.StaticPage
+@{
+    ViewBag.Title = Model.PageTitle;
+}
+
+<div class="MainRightBorder">
+    <div id="MainRight">
+        <div class="RoundedTitle">
+            <h1>@Model.PageTitle</h1>
+        </div>
+        <div class="ContactPanel">
+            @Html.Raw(Model.PageContent)
+        </div>
+    </div>
+</div>
